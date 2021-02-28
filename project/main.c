@@ -24,10 +24,5 @@ static int HelloInit(void) {
 	return 0; //return 0 upon success
 }
 
-static void HelloExit(void) { 
-   printk(KERN_INFO "ROOTKIT_DEBUG: GOODBYE WORLD \n"); 
-}
-
 //Calls the functions 
 module_init(HelloInit);
-module_exit(HelloExit);
