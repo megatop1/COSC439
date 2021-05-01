@@ -1,12 +1,12 @@
 #include "functs.h" //Call in our function prototypes 
 
-MODULE_LICENSE("GPL"); //Prevents no license warning upon compilation
 
 #define DRIVER_AUTHOR "RJ and Group 3"
 #define DRIVER_DESC "Hello World Driver"
-MODULE_AUTHOR(DRIVER_AUTHOR);
-MODULE_DESCRIPTION(DRIVER_DESC);
-
+MODULE_AUTHOR("RJ Pisciotta");
+MODULE_DESCRIPTION("Simple Hooking of a Syscall");
+MODULE_LICENSE("GPL"); //Prevents no license warning upon compilation
+MODULE_VERSION("1.0");
 MODULE_SUPPORTED_DEVICE("testdevice") //devices are anything thats mapped or located to dev. When you have hardware that says something like /dev/sda etc
 
 int Major; //Device number that the driver device will talk too
