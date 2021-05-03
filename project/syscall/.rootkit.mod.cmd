@@ -1,1 +1,0 @@
-cmd_/home/rj/Documents/cosc439/COSC439/project/syscall/rootkit.mod := { echo  /home/rj/Documents/cosc439/COSC439/project/syscall/main.o;  echo; } > /home/rj/Documents/cosc439/COSC439/project/syscall/rootkit.mod

@@ -17,7 +17,7 @@ MODULE_VERSION("1.0");
 unsigned long **SYS_CALL_TABLE; 
 
 void EnablePageWriting(void) {
-	write_cr0(read_cr0() & (-0x100000)); //write_cr0 is setting the processor flag to disable a security segment that is on the pages of memory that disables them from being written too. This allows us to write to them
+	write_cr0(read_cr0() & (~0x10000)); //write_cr0 is setting the processor flag to disable a security segment that is on the pages of memory that disables them from being written too. This allows us to write to them
 }
 
 void DisablePageWriting(void) {
