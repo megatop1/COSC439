@@ -55,7 +55,7 @@ dirp3 = retn;
 RemainingBytes = Records;
 
 while(RemainingBytes > 0) {
-	length = dirp->d_reclen;
+	length = dirp3->d_reclen;
 	RemainingBytes -= dirp3->d_reclen;
 
 	printk(KERN_INFO "RemainingBytes %d    \t File: %s " , RemainingBytes , dirp3->d_name );
