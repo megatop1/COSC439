@@ -3,6 +3,7 @@ cmd_/home/rj/COSC439/project/hidefiles/rootkit.mod.o := gcc -Wp,-MD,/home/rj/COS
 source_/home/rj/COSC439/project/hidefiles/rootkit.mod.o := /home/rj/COSC439/project/hidefiles/rootkit.mod.c
 
 deps_/home/rj/COSC439/project/hidefiles/rootkit.mod.o := \
+    $(wildcard include/config/module/unload.h) \
     $(wildcard include/config/retpoline.h) \
   include/linux/compiler_types.h \
     $(wildcard include/config/have/arch/compiler/h.h) \
@@ -28,7 +29,6 @@ deps_/home/rj/COSC439/project/hidefiles/rootkit.mod.o := \
     $(wildcard include/config/tracing.h) \
     $(wildcard include/config/event/tracing.h) \
     $(wildcard include/config/ftrace/mcount/record.h) \
-    $(wildcard include/config/module/unload.h) \
     $(wildcard include/config/constructors.h) \
     $(wildcard include/config/strict/module/rwx.h) \
   include/linux/list.h \
