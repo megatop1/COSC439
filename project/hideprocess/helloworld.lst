@@ -1,0 +1,74 @@
+   1              		.file	"helloworld.c"
+   2              		.intel_syntax noprefix
+   3              		.text
+   4              	.Ltext0:
+   5              		.globl	count
+   6              		.bss
+   7              		.align 4
+  10              	count:
+  11 0000 00000000 		.zero	4
+  12              		.section	.rodata
+  13              	.LC0:
+  14 0000 5469636B 		.string	"Tick Tock -- Cycle %d \n"
+  14      20546F63 
+  14      6B202D2D 
+  14      20437963 
+  14      6C652025 
+  15              		.text
+  16              		.globl	main
+  18              	main:
+  19              	.LFB0:
+  20              		.file 1 "helloworld.c"
+   1:helloworld.c  **** #include <stdio.h>
+   2:helloworld.c  **** #include <time.h>
+   3:helloworld.c  **** #include <unistd.h>
+   4:helloworld.c  **** 
+   5:helloworld.c  **** int count = 0;
+   6:helloworld.c  **** int main() {
+  21              		.loc 1 6 0
+  22              		.cfi_startproc
+  23 0000 55       		push	rbp
+  24              		.cfi_def_cfa_offset 16
+  25              		.cfi_offset 6, -16
+  26 0001 4889E5   		mov	rbp, rsp
+  27              		.cfi_def_cfa_register 6
+   7:helloworld.c  **** 	count++;
+  28              		.loc 1 7 0
+  29 0004 8B050000 		mov	eax, DWORD PTR count[rip]
+  29      0000
+  30 000a 83C001   		add	eax, 1
+  31 000d 89050000 		mov	DWORD PTR count[rip], eax
+  31      0000
+  32              	.L2:
+   8:helloworld.c  ****         	while(1) {	
+   9:helloworld.c  **** 		printf("Tick Tock -- Cycle %d \n", count);
+  33              		.loc 1 9 0 discriminator 1
+  34 0013 8B050000 		mov	eax, DWORD PTR count[rip]
+  34      0000
+  35 0019 89C6     		mov	esi, eax
+  36 001b 488D3D00 		lea	rdi, .LC0[rip]
+  36      000000
+  37 0022 B8000000 		mov	eax, 0
+  37      00
+  38 0027 E8000000 		call	printf@PLT
+  38      00
+  10:helloworld.c  **** 		usleep(100000);
+  39              		.loc 1 10 0 discriminator 1
+  40 002c BFA08601 		mov	edi, 100000
+  40      00
+  41 0031 E8000000 		call	usleep@PLT
+  41      00
+   9:helloworld.c  **** 		usleep(100000);
+  42              		.loc 1 9 0 discriminator 1
+  43 0036 EBDB     		jmp	.L2
+  44              		.cfi_endproc
+  45              	.LFE0:
+  47              	.Letext0:
+  48              		.file 2 "/usr/lib/gcc/x86_64-linux-gnu/7/include/stddef.h"
+  49              		.file 3 "/usr/include/x86_64-linux-gnu/bits/types.h"
+  50              		.file 4 "/usr/include/x86_64-linux-gnu/bits/libio.h"
+  51              		.file 5 "/usr/include/stdio.h"
+  52              		.file 6 "/usr/include/x86_64-linux-gnu/bits/sys_errlist.h"
+  53              		.file 7 "/usr/include/time.h"
+  54              		.file 8 "/usr/include/unistd.h"
+  55              		.file 9 "/usr/include/x86_64-linux-gnu/bits/getopt_core.h"
