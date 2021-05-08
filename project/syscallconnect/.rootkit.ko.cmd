@@ -1,0 +1,1 @@
+cmd_/home/rj/COSC439/project/syscallconnect/rootkit.ko := ld -r -m elf_x86_64 -z max-page-size=0x200000 -T ./scripts/module-common.lds --build-id  -o /home/rj/COSC439/project/syscallconnect/rootkit.ko /home/rj/COSC439/project/syscallconnect/rootkit.o /home/rj/COSC439/project/syscallconnect/rootkit.mod.o ;  true
