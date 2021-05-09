@@ -1,0 +1,1 @@
+cmd_/home/rj/COSC439/project/syscall_execve/rootkit.o := ld -m elf_x86_64 -z max-page-size=0x200000   -r -o /home/rj/COSC439/project/syscall_execve/rootkit.o /home/rj/COSC439/project/syscall_execve/main.o 
